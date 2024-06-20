@@ -32,7 +32,7 @@ def test_calcular_gaussianas(student_calcular_gaussianas):
     sigma_values = [2, 4, 8, 16]
     result = student_calcular_gaussianas(mu, sigma_values, x)
     assert result.shape == (1000, 4), f"Expected shape (1000, 4), got {result.shape}"
-    assert np.allclose(result[:, 0], gaussian_test(x, mu, sigma_values[0])/gaussian_test(x, mu, sigma_values[0]).sum()), "First column does not match expected Gaussian values"
+    assert np.allclose(result[:, 0], gaussian_test(x, mu, sigma_values[0])), "First column does not match expected Gaussian values"
     print("Todos los test pasaron! Sigue así Coder")
 
 def test_crear_filtro_gaussiano(student_crear_filtro_gaussiano):
